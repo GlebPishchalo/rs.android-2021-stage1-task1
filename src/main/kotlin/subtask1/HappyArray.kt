@@ -9,7 +9,7 @@ class HappyArray {
         }
         val happyArray = arrayListOf(firstArray[0])
         val firstArray = sadArray.reversedArray()
-        var left = 0
+        val left = 0
 
 
         for (i in 1 until firstArray.lastIndex) {

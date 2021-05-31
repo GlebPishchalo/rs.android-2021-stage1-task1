@@ -10,7 +10,7 @@ class StringParser {
         var b = 0
         for (i in inputString.withIndex()){
             if (i.value == '[' || i.value == '<' || i.value == '('){
-                val Bracket = when (i.value){
+                val _bracket = when (i.value){
                     '[' -> ']'
                     '<' -> '>'
                     '(' -> ')'
@@ -18,7 +18,7 @@ class StringParser {
                 }
                 for (a in i.index + 1 until  inputString.length){
                     if (inputString[a] == i.value) b++
-                    if (inputString[a] == Bracket){
+                    if (inputString[a] == _bracket){
                         if (b == 0) {
                             result.add(inputString.substring(i.index + 1 until a))
                         } else b--

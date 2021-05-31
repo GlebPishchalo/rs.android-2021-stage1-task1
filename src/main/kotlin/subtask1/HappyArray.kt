@@ -7,9 +7,10 @@ class HappyArray {
         if (sadArray.size <= 2) {
             return sadArray
         }
-        val happyArray = arrayListOf(firstArray[0])
         val firstArray = sadArray.reversedArray()
-        val left = 0
+        val happyArray = arrayListOf(firstArray[0])
+
+        var left = 0
 
 
         for (i in 1 until firstArray.lastIndex) {
